@@ -14,7 +14,7 @@ module Docs
     options[:container] = 'body .post'
 
     options[:attribution] = <<-HTML
-      &copy; Petka Antonov
+      &copy; Petka Antonov<br/>
       Licensed under the MIT License.
     HTML
   end

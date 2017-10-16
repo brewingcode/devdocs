@@ -36,30 +36,29 @@ module Docs
       }
 
       def get_name
-        h = at_css('h1.post-title')
-        if h
-          h.content
-        else
-          at_css('.post-content h2').content
+        name = at_css('h1.post-title')
+        if name.nil?
+          name = at_css('.post-content h2')
         end
+        name.text
       end
 
       def get_type
-        t = nil
+        type = nil
         TYPE_MAP.each do |k,v|
           if k.to_s.casecmp(name.strip) == 0
-            t = k
+            type = k
             break
           else
             slug_end = slug.sub(%r(^docs/api/), '')
             if v.include?(slug_end.downcase)
-              t = k
+              type = k
               break
             end
           end
         end
 
-        t.to_s
+        type.to_s
       end
 
     end
