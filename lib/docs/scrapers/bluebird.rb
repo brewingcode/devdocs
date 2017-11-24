@@ -3,7 +3,7 @@ module Docs
     self.type = 'bluebird'
     self.base_url = 'http://bluebirdjs.com'
     self.root_path = '/docs/api-reference.html'
-    self.release = '3.5.0'
+    self.release = '3.5.1'
     self.links = {
       home: 'http://bluebirdjs.com/',
       code: 'https://github.com/petkaantonov/bluebird/'
