@@ -12,6 +12,7 @@ module Docs
     html_filters.push 'bluebird/clean_html', 'bluebird/entries'
 
     options[:container] = 'body .post'
+    options[:max_concurrentcy] = 1
 
     options[:attribution] = <<-HTML
       &copy; Petka Antonov<br/>
